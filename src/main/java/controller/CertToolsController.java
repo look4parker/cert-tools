@@ -15,9 +15,9 @@ public class CertToolsController {
         private final static Logger LOGGER = LoggerFactory.getLogger( CertToolsController.class );
 
         @RequestMapping( value="/create-certs", method = RequestMethod.POST, consumes = "application/json")
-        public DeferredResult<String> batchRequest(@RequestParam( value="timewindow", required = false ) String timeWindow,
-                                                                 @RequestParam( value="timeout", required = false ) String requestTimeout ) {
+        public DeferredResult<String> batchRequest(@RequestParam( value="val", required = false ) String timeWindow) {
             LOGGER.info("Received request to create certificates.");
             return new DeferredResult<String>();
         }
+
 }
